@@ -1,4 +1,4 @@
-class chat:
+class Chat:
 
     START_TEXT = """ Bu bot Filmle - Alt Dosyasını Yapıştırma / Birleştirme için mutlaka gerekir
 
