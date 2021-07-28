@@ -1,36 +1,35 @@
+class chat:
 
-class Chat:
+    START_TEXT = "" Bu bot Filmle - Alt Dosyasını Yapıştırma / Birleştirme için mutlaka gerekir
 
-    START_TEXT = """This is a Telegram Bot to Mux subtitle into a video
+<b> Başlamak için bana Film & Altyazı dosyası gönderir </b>
 
-<b>Send me a Telegram file to begin</b>
+/help daha fazla ürün için..
 
-/help for more details..
-
-Credits :- @mohdsabahat
     """
 
     HELP_USER = "??"
 
-    HELP_TEXT ="""<b>Welcome to the Help Menu</b>
+    HELP_TEXT ="""<b>Yardım Menüsüne Hoş Geldiniz</b>
 
-1.) Send a Video file or url.
-2.) Send a subtitle file (ass or srt)
-3.) Choose you desired type of muxing!
+1.) Bir Video dosyası veya url gönderin.
+2.) Bir altyazı dosyası gönderin (ass veya srt)
+3.) İstediğiniz muxing türünü seçin!
 
-To give custom name to file send it with url seperated with |
-<i>url|custom_name.mp4</i>
+Dosyaya özel isim vermek için url'yi | ile ayrılmış olarak gönderin.
+<i>url|özel_adı.mp4
+</i>
 
-<b>Note : </b><i>Please note that only english type fonts are supported in hardmux other scripts will be shown as empty blocks on the video!</i>
+<b>Not : </b><i>Hardmux'ta yalnızca ingilizce yazı tiplerinin desteklendiğini lütfen unutmayın, diğer komut dosyaları videoda boş bloklar olarak gösterilecektir!</i>
 
-<a href="https://github.com/mohdsabahat/sub-muxer">Repo URL</a>"""
+"""
 
-    NO_AUTH_USER = "You are not authorised to use this bot.\nContact the bot owner!"
-    DOWNLOAD_SUCCESS = """File downloaded successfully!
+    NO_AUTH_USER = "Bu botu kullanma yetkiniz yok.\nBot yiyesine iletişime geçin!"
+    DOWNLOAD_SUCCESS = """Dosya başarıyla indirildi!
 
-Time taken : {} seconds."""
-    FILE_SIZE_ERROR = "ERROR : Cannot Extract File Size from URL!"
-    MAX_FILE_SIZE = "File size is greater than 2Gb. Which is the limit imposed by telegram!"
-    LONG_CUS_FILENAME = """Filename you provided is greater than 60 characters.
-Please provide a shorter name."""
-    UNSUPPORTED_FORMAT = "ERROR : File format {} Not supported!"
+Geçen süre : {} saniye."""
+    FILE_SIZE_ERROR = "HATA : URL'den Dosya Boyutu Çıkarılamıyor!"
+    MAX_FILE_SIZE = "Dosya boyutu 2 Gb'den büyük. Telgraf tarafından belirlenen sınır budur!"
+    LONG_CUS_FILENAME = """Sağladığınız dosya adı 60 karakterden uzun.
+Lütfen daha kısa bir ad girin."""
+    UNSUPPORTED_FORMAT = "HATA : Dosya biçimi {} Desteklenmiyor!"
