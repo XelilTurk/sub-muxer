@@ -4,7 +4,7 @@ class Chat:
 
 <b> Başlamak için bana Film & Altyazı dosyası gönderir </b>
 
-/help daha fazla ürün için..
+/help daha çok bilgi için..
 
     """
 
@@ -12,11 +12,11 @@ class Chat:
 
     HELP_TEXT ="""<b>Yardım Menüsüne Hoş Geldiniz</b>
 
-1.) Bir Video dosyası veya url gönderin.
+1.) Bir Video dosyası veya URL(bağlantı) gönderin.
 2.) Bir altyazı dosyası gönderin (ass veya srt)
-3.) İstediğiniz muxing türünü seçin!
+3.) İstediğiniz muxing türünü seçin!/softmux ya /hardmux
 
-Dosyaya özel isim vermek için url'yi | ile ayrılmış olarak gönderin.
+Dosyaya özel ad vermek için URL'yi | ile ayrılmış olarak gönderin.
 <i>url|özel_adı.mp4
 </i>
 
@@ -24,7 +24,7 @@ Dosyaya özel isim vermek için url'yi | ile ayrılmış olarak gönderin.
 
 """
 
-    NO_AUTH_USER = "Bu botu kullanma yetkiniz yok.\nBot yiyesine iletişime geçin!"
+    NO_AUTH_USER = "Bu botu kullanma yetkiniz yok.\n Bot yiyesine iletişime geçin!"
     DOWNLOAD_SUCCESS = """Dosya başarıyla indirildi!
 
 Geçen süre : {} saniye."""
