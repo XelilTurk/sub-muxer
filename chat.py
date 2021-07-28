@@ -1,6 +1,6 @@
 class Chat:
 
-    START_TEXT = """ Bu bot Filmle - Alt Dosyasını Yapıştırma / Birleştirme için mutlaka gerekir
+    START_TEXT = """ Salam , Bu bot videoya - Altyazı Dosyasını Birleştirme için tasarlanmış.
 
 <b> Başlamak için bana Film & Altyazı dosyası gönderir </b>
 
@@ -13,14 +13,12 @@ class Chat:
     HELP_TEXT ="""<b>Yardım Menüsüne Hoş Geldiniz</b>
 
 1.) Bir Video dosyası veya URL(bağlantı) gönderin.
-2.) Bir altyazı dosyası gönderin (ass veya srt)
-3.) İstediğiniz muxing türünü seçin!/softmux ya /hardmux
+2.) Altyazı dosyası gönderin (ass veya srt)
+3.) İstediğiniz muxing türünü seçin! /softmux ya /hardmux
 
-Dosyaya özel ad vermek için URL'yi | ile ayrılmış olarak gönderin.
-<i>url|özel_adı.mp4
+Dosyaya özel ad vermek için URL'yi | ile ayrılmış olarak gönderin.\n
+<i><b> Örnek </b>: URL | özel_adı.mp4
 </i>
-
-<b>Not : </b><i>Hardmux'ta yalnızca ingilizce yazı tiplerinin desteklendiğini lütfen unutmayın, diğer komut dosyaları videoda boş bloklar olarak gösterilecektir!</i>
 
 """
 
