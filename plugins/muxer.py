@@ -25,15 +25,15 @@ async def softmux(client, message):
     og_sub_filename = db.get_sub_filename(chat_id)
     text = ''
     if not og_vid_filename :
-        text += 'First send a Video File\n'
+        text += 'İlk video dosyası gönderin!\n'
     if not og_sub_filename :
-        text += 'Send a Subtitle File!'
+        text += 'Bir Altyazı Dosyası gönderin!'
 
     if not (og_sub_filename and og_vid_filename) :
         await client.send_message(chat_id, text)
         return
 
-    text = 'Your File is Being Soft Subbed. This should be done in few seconds!'
+    text = 'Dosyanız Birleşmek üzeredir(Softmux) . Bu birkaç saniye içinde yapılmalıdır !'
     sent_msg = await client.send_message(chat_id, text)
 
     softmux_filename = await softmux_vid(og_vid_filename, og_sub_filename, sent_msg)
@@ -49,18 +49,18 @@ async def softmux(client, message):
                 chat_id, 
                 progress = progress_bar, 
                 progress_args = (
-                    'Uploading your File!',
+                    'Dosyanız yükleniyor 📲!',
                     sent_msg,
                     start_time
                     ), 
                 document = os.path.join(Config.DOWNLOAD_DIR, final_filename),
                 caption = final_filename
                 )
-        text = 'File Successfully Uploaded!\nTotal Time taken : {} seconds'.format(round(time.time()-start_time))
+        text = 'Dosya Başarıyla Yüklendi!✅  \nToplam Süre : {} saniye'.format(round(time.time()-start_time))
         await sent_msg.edit(text)
     except Exception as e:
         print(e)
-        await client.send_message(chat_id, 'An error occured while uploading the file!\nCheck logs for details of the error!')
+        await client.send_message(chat_id, 'Dosya yüklenirken bir hata oluştu!⚠️\n Hatanın ayrıntıları için Kütükler (logs) kontrol edin!')
 
     path = Config.DOWNLOAD_DIR+'/'
     os.remove(path+og_sub_filename)
@@ -81,9 +81,9 @@ async def hardmux(client, message):
     og_sub_filename = db.get_sub_filename(chat_id)
     text = ''
     if not og_vid_filename :
-        text += 'First send a Video File\n'
+        text += 'İlk Bir Film Dostası Gönderin\n'
     if not og_sub_filename :
-        text += 'Send a Subtitle File!'
+        text += 'Bir Altyazı Dosyası Gönderin!'
     
     if not (og_sub_filename or og_vid_filename) :
         return await client.send_message(chat_id, text)
