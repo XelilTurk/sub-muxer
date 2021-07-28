@@ -1,6 +1,6 @@
 class chat:
 
-    START_TEXT = "" Bu bot Filmle - Alt Dosyasını Yapıştırma / Birleştirme için mutlaka gerekir
+    START_TEXT = """ Bu bot Filmle - Alt Dosyasını Yapıştırma / Birleştirme için mutlaka gerekir
 
 <b> Başlamak için bana Film & Altyazı dosyası gönderir </b>
 
