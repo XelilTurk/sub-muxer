@@ -32,7 +32,7 @@ async def save_doc(client, message):
 
     chat_id = message.from_user.id
     start_time = time.time()
-    downloading = await client.send_message(chat_id, 'Downloading your File!')
+    downloading = await client.send_message(chat_id, '🔃 Dosyanız İndiriliyor!')
     download_location = await client.download_media(
         message = message,
         file_name = Config.DOWNLOAD_DIR+'/',
@@ -46,7 +46,7 @@ async def save_doc(client, message):
 
     if download_location is None:
         return client.edit_message_text(
-            text = 'Downloading Failed!',
+            text = 'İndirme Başarısız❗',
             chat_id = chat_id,
             message_id = downloading.message_id
         )
@@ -76,9 +76,9 @@ async def save_doc(client, message):
         os.rename(Config.DOWNLOAD_DIR+'/'+tg_filename,Config.DOWNLOAD_DIR+'/'+filename)
         db.put_sub(chat_id, filename)
         if db.check_video(chat_id):
-            text = 'Subtitle file downloaded successfully.\nChoose your desired muxing!\n[ /softmux , /hardmux ]'
+            text = 'Altyazı dosyası başarıyla indirildi ✅.\nİstediğiniz muxing i seçin!\n[ /softmux , /hardmux ]'
         else:
-            text = 'Subtitle file downloaded.\nNow send Video File!'
+            text = 'Altyazı dosyası Başarıyla indirildi ✅.\n indi Video Dosyası gönderin!'
 
         await client.edit_message_text(
             text = text,
@@ -90,9 +90,9 @@ async def save_doc(client, message):
         os.rename(Config.DOWNLOAD_DIR+'/'+tg_filename,Config.DOWNLOAD_DIR+'/'+filename)
         db.put_video(chat_id, filename, save_filename)
         if db.check_sub(chat_id):
-            text = 'Video file downloaded successfully.\nChoose your desired muxing.\n[ /softmux , /hardmux ]'
+            text = 'Video dosyası başarıyla indirildi ✅.\nİstediğiniz muxing seçin.\n[ /softmux , /hardmux ]'
         else :
-            text = 'Video file downloaded successfully.\nNow send Subtitle file!'
+            text = 'Video dosyası Başarıyla  indirildi ✅.\n indi Altyazı Dosyası gönderin!'
         await client.edit_message_text(
             text = text,
             chat_id = chat_id,
@@ -114,7 +114,7 @@ async def save_video(client, message):
 
     chat_id = message.from_user.id
     start_time = time.time()
-    downloading = await client.send_message(chat_id, 'Downloading your File!')
+    downloading = await client.send_message(chat_id, '🔃 Dosyanız İndiriliyor!')
     download_location = await client.download_media(
         message = message,
         file_name = Config.DOWNLOAD_DIR+'/',
@@ -128,7 +128,7 @@ async def save_video(client, message):
 
     if download_location is None:
         return client.edit_message_text(
-            text = 'Downloading Failed!',
+            text = 'İndirme Başarısız❗️',
             chat_id = chat_id,
             message_id = downloading.message_id
         )
